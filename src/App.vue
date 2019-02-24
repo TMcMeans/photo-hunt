@@ -2,7 +2,7 @@
   <div id="app">
     <h1>Photo Hunt</h1>
     <p>Search for and view photos based on your search terms below.</p>
-    <SearchForm/>
+    <SearchForm @handleClick="fetchPhotos"/>
     <PhotoContainer/>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
   components: {
     SearchForm,
     PhotoContainer
+  },
+  methods: {
+    fetchPhotos: query => {
+      console.log(query);
+    }
   }
 };
 </script>
