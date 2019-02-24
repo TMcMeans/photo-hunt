@@ -1,6 +1,6 @@
 <template>
   <div class="search-form">
-    <input type="text">
+    <input type="text" v-model="query">
     <button>Search</button>
   </div>
 </template>
@@ -8,9 +8,10 @@
 <script>
 export default {
   name: "SearchForm",
-  props: {
-    msg: String
-  }
+  props: {},
+  data: () => ({
+    query: ""
+  })
 };
 </script>
  
