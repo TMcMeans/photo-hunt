@@ -1,7 +1,7 @@
 <template>
   <div class="search-form">
-    <input type="text" v-model="query">
-    <button>Search</button>
+    <input type="text" v-model="query" placeholder="Search for photos">
+    <button @click.prevent="onClick">Search</button>
   </div>
 </template>
 
@@ -11,7 +11,12 @@ export default {
   props: {},
   data: () => ({
     query: ""
-  })
+  }),
+  methods: {
+    onClick() {
+      this.query = "";
+    }
+  }
 };
 </script>
  
