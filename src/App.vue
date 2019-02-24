@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Photo Hunt</h1>
+    <h1 class="title">Photo Hunt</h1>
     <p>Search for and view photos based on your search terms below.</p>
     <SearchForm @handleClick="fetchPhotos"/>
     <PhotoContainer :photos="photos" :query="query"/>
@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css?family=Sanchez");
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,5 +52,16 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.title {
+  font-family: "Sanchez", serif;
+  font-size: 3em;
+  border: 2px solid black;
+  color: white;
+  background: black;
+  margin: 0 auto 0 auto;
+}
+p {
+  font-size: 1.2em;
 }
 </style>

@@ -1,7 +1,5 @@
 <template>
-  <div class="photo">
-    <img :src="photo.urls.small" :alt="photo.description">
-  </div>
+  <img class="photo" :src="photo.urls.small" :alt="photo.description">
 </template>
 
 <script>
@@ -15,4 +13,11 @@ export default {
  
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.photo {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
 </style>
+
