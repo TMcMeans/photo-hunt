@@ -1,6 +1,7 @@
 <template>
   <div class="photo-container">
-    <h1>Photo Container</h1>
+    <h1 v-show="query">{{query}}</h1>
+    <p v-show="!photos.length">No photos searched...</p>
     <Photo v-for="photo in photos" :key="photo.id" :photo="photo"/>
   </div>
 </template>
@@ -14,7 +15,8 @@ export default {
     Photo
   },
   props: {
-    photos: Array
+    photos: Array,
+    query: String
   }
 };
 </script>

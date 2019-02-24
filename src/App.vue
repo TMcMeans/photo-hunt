@@ -3,7 +3,7 @@
     <h1>Photo Hunt</h1>
     <p>Search for and view photos based on your search terms below.</p>
     <SearchForm @handleClick="fetchPhotos"/>
-    <PhotoContainer :photos="photos"/>
+    <PhotoContainer :photos="photos" :query="query"/>
   </div>
 </template>
 
@@ -21,7 +21,8 @@ export default {
     PhotoContainer
   },
   data: () => ({
-    photos: []
+    photos: [],
+    query: ""
   }),
   methods: {
     fetchPhotos(query) {
@@ -32,6 +33,7 @@ export default {
         .then(response => {
           console.log(`Fetching data based on search query: ${query}`);
           this.photos = response.data.results;
+          this.query = query;
         })
         .catch(error => {
           console.log(`There was an error fetching data: ${error.response}`);
