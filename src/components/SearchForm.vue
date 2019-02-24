@@ -1,15 +1,22 @@
 <template>
   <div class="search-form">
-    <input type="text">
-    <button>Search</button>
+    <input type="text" v-model="query" placeholder="Search for photos">
+    <button @click.prevent="onClick">Search</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "SearchForm",
-  props: {
-    msg: String
+  props: {},
+  data: () => ({
+    query: ""
+  }),
+  methods: {
+    onClick() {
+      this.$emit("handleClick", this.query);
+      this.query = "";
+    }
   }
 };
 </script>

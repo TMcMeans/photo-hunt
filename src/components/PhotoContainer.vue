@@ -1,12 +1,18 @@
 <template>
   <div class="photo-container">
     <h1>Photo Container</h1>
+    <Photo/>
   </div>
 </template>
 
 <script>
+import Photo from "./Photo.vue";
+
 export default {
   name: "PhotoContainer",
+  components: {
+    Photo
+  },
   props: {
     msg: String
   }
