@@ -1,6 +1,6 @@
 <template>
   <div class="photo">
-    <h1>Photo</h1>
+    <img :src="photo.urls.small" :alt="photo.description">
   </div>
 </template>
 

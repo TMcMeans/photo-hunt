@@ -30,11 +30,11 @@ export default {
       axios
         .get(url)
         .then(response => {
-          console.log("fetching data");
+          console.log(`Fetching data based on search query: ${query}`);
           this.photos = response.data.results;
         })
         .catch(error => {
-          console.log(error);
+          console.log(`There was an error fetching data: ${error.response}`);
         });
     }
   }
