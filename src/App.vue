@@ -10,6 +10,7 @@
 <script>
 import SearchForm from "./components/SearchForm.vue";
 import PhotoContainer from "./components/PhotoContainer.vue";
+import { accessKey, secretKey } from "./api/apiKey.js";
 
 export default {
   name: "app",
@@ -17,9 +18,18 @@ export default {
     SearchForm,
     PhotoContainer
   },
+  data: () => {
+    photos: [];
+  },
   methods: {
     fetchPhotos: query => {
-      console.log(query);
+      const url = ``;
+      axios
+        .get(url)
+        .then(response => response.json())
+        .then(photo => (this.photos = photos));
+
+      console.log(this.photos);
     }
   }
 };
