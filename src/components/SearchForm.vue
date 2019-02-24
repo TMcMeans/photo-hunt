@@ -21,7 +21,7 @@ export default {
         this.$emit("handleClick", this.query);
         this.query = "";
       } else {
-        this.error = "You must type a query in the search to view photos.";
+        this.error = "Type a query in the search bar to view related images.";
       }
     }
   }
@@ -30,4 +30,25 @@ export default {
  
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+input[type="text"] {
+  width: 200px;
+  height: 25px;
+  font-size: 1em;
+  margin: 10px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid black;
+}
+button {
+  border-radius: 0%;
+  height: 30px;
+  font-size: 1em;
+  border: 2px solid black;
+  cursor: pointer;
+}
+button:hover {
+  background: black;
+  color: white;
+}
 </style>

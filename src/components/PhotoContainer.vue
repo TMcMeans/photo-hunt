@@ -1,12 +1,15 @@
 <template>
   <div class="photo-container">
-    <h1 v-show="query">{{query}}</h1>
-    <p v-show="!photos.length">No photos searched...</p>
-    <Photo v-for="photo in photos" :key="photo.id" :photo="photo"/>
+    <h1 class="search-string" v-show="query">viewing search results for: {{query}}</h1>
+    <p v-show="!photos.length">No photos found...</p>
+    <div class="photo-wrapper">
+      <Photo class="photo" v-for="photo in photos" :key="photo.id" :photo="photo"/>
+    </div>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 import Photo from "./Photo.vue";
 
 export default {
@@ -14,6 +17,9 @@ export default {
   components: {
     Photo
   },
+  data: () => ({
+    page_number: 1
+  }),
   props: {
     photos: Array,
     query: String
@@ -23,4 +29,20 @@ export default {
  
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Sanchez");
+.photo-container {
+  margin: 0 auto;
+  width: 90%;
+}
+.photo-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: space-evenly;
+}
+.search-string {
+  font-family: "Sanchez", serif;
+}
 </style>
