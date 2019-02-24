@@ -12,7 +12,7 @@ import axios from "axios";
 
 import SearchForm from "./components/SearchForm.vue";
 import PhotoContainer from "./components/PhotoContainer.vue";
-import { accessKey, secretKey } from "./api/apiKey.js";
+import { accessKey } from "./api/apiKey.js";
 
 export default {
   name: "app",
@@ -26,7 +26,7 @@ export default {
   }),
   methods: {
     fetchPhotos(query) {
-      const url = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${accessKey}&query=${query}`;
+      const url = `https://api.unsplash.com/search/photos?page=1&per_page=100&client_id=${accessKey}&query=${query}`;
 
       axios
         .get(url)

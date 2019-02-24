@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import Photo from "./Photo.vue";
 
 export default {
@@ -16,6 +17,9 @@ export default {
   components: {
     Photo
   },
+  data: () => ({
+    page_number: 1
+  }),
   props: {
     photos: Array,
     query: String
