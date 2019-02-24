@@ -14,7 +14,7 @@ export default {
     Photo
   },
   props: {
-    msg: String
+    photos: Array
   }
 };
 </script>

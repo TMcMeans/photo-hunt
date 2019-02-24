@@ -3,11 +3,13 @@
     <h1>Photo Hunt</h1>
     <p>Search for and view photos based on your search terms below.</p>
     <SearchForm @handleClick="fetchPhotos"/>
-    <PhotoContainer/>
+    <PhotoContainer :photos="photos"/>
   </div>
 </template>
 
 <script>
+import axios from "axios";
+
 import SearchForm from "./components/SearchForm.vue";
 import PhotoContainer from "./components/PhotoContainer.vue";
 import { accessKey, secretKey } from "./api/apiKey.js";
@@ -18,18 +20,22 @@ export default {
     SearchForm,
     PhotoContainer
   },
-  data: () => {
-    photos: [];
-  },
+  data: () => ({
+    photos: []
+  }),
   methods: {
-    fetchPhotos: query => {
-      const url = ``;
+    fetchPhotos(query) {
+      const url = `https://api.unsplash.com/search/photos?page=1&per_page=50&client_id=${accessKey}&query=${query}`;
+
       axios
         .get(url)
-        .then(response => response.json())
-        .then(photo => (this.photos = photos));
-
-      console.log(this.photos);
+        .then(response => {
+          console.log("fetching data");
+          this.photos = response.data.results;
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   }
 };
