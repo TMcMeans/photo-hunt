@@ -14,6 +14,7 @@ export default {
   }),
   methods: {
     onClick() {
+      this.$emit("handleClick", this.query);
       this.query = "";
     }
   }
