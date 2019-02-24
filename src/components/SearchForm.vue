@@ -1,5 +1,6 @@
 <template>
   <div class="search-form">
+    <p v-show="error">{{error}}</p>
     <input type="text" v-model="query" placeholder="Search for photos">
     <button @click.prevent="onClick">Search</button>
   </div>
@@ -10,12 +11,18 @@ export default {
   name: "SearchForm",
   props: {},
   data: () => ({
-    query: ""
+    query: "",
+    error: ""
   }),
   methods: {
     onClick() {
-      this.$emit("handleClick", this.query);
-      this.query = "";
+      if (this.query) {
+        this.error = "";
+        this.$emit("handleClick", this.query);
+        this.query = "";
+      } else {
+        this.error = "You must type a query in the search to view photos.";
+      }
     }
   }
 };
