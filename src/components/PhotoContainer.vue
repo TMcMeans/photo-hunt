@@ -1,7 +1,7 @@
 <template>
   <div class="photo-container">
     <h1>Photo Container</h1>
-    <Photo/>
+    <Photo v-for="photo in photos" :key="photo.id" :photo="photo"/>
   </div>
 </template>
 

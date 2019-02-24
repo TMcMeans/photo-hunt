@@ -8,7 +8,7 @@
 export default {
   name: "Photo",
   props: {
-    msg: String
+    photo: Object
   }
 };
 </script>
