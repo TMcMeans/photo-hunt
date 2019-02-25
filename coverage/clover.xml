@@ -1,7 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1551132330362" clover="3.2.0">
-  <project timestamp="1551132330362" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0">
+<coverage generated="1551138349898" clover="3.2.0">
+  <project timestamp="1551138349899" name="All files">
+    <metrics statements="37" coveredstatements="17" conditionals="2" coveredconditionals="1" methods="7" coveredmethods="3" elements="46" coveredelements="21" complexity="0" loc="37" ncloc="37" packages="4" files="6" classes="6">
+      <package name="src">
+        <metrics statements="16" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+        <file name="App.vue" path="/Users/tanjie/Desktop/Turing/Mod4/photo-hunt/src/App.vue">
+          <metrics statements="12" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="2"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="13" count="1" type="stmt"/>
+          <line num="14" count="1" type="stmt"/>
+          <line num="15" count="1" type="stmt"/>
+          <line num="23" count="5" type="stmt"/>
+          <line num="29" count="3" type="stmt"/>
+          <line num="31" count="3" type="stmt"/>
+          <line num="34" count="3" type="stmt"/>
+          <line num="35" count="3" type="stmt"/>
+          <line num="36" count="3" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+          <line num="41" count="0" type="stmt"/>
+        </file>
+        <file name="router.js" path="/Users/tanjie/Desktop/Turing/Mod4/photo-hunt/src/router.js">
+          <metrics statements="4" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="2" count="0" type="stmt"/>
+          <line num="5" count="0" type="stmt"/>
+          <line num="7" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.api">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="apiKey.js" path="/Users/tanjie/Desktop/Turing/Mod4/photo-hunt/src/api/apiKey.js">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.components">
+        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <file name="PhotoContainer.vue" path="/Users/tanjie/Desktop/Turing/Mod4/photo-hunt/src/components/PhotoContainer.vue">
+          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="12" count="2" type="stmt"/>
+          <line num="13" count="2" type="stmt"/>
+        </file>
+        <file name="SearchForm.vue" path="/Users/tanjie/Desktop/Turing/Mod4/photo-hunt/src/components/SearchForm.vue">
+          <metrics statements="6" coveredstatements="3" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+          <line num="12" count="8" type="stmt"/>
+          <line num="18" count="2" type="cond" truecount="1" falsecount="1"/>
+          <line num="19" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="23" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.views">
+        <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <file name="App.vue" path="/Users/tanjie/Desktop/Turing/Mod4/photo-hunt/src/views/App.vue">
+          <metrics statements="11" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="14" count="0" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="34" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="39" count="0" type="stmt"/>
+        </file>
+      </package>
     </metrics>
   </project>
 </coverage>

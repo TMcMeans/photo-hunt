@@ -37,6 +37,8 @@ export default {
         })
         .catch(error => {
           console.log(`There was an error fetching data: ${error.response}`);
+
+          return error.response;
         });
     }
   }

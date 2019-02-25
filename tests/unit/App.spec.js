@@ -147,5 +147,21 @@ describe('App', () => {
     expect(wrapper.vm.photos).toEqual(expected);
   });
 
-  it('should throw an error');
+  it('should throw an error if photos are not fetched', async () => {
+    jest.mock('axios', () => ({
+      get: jest.fn(() => Promise.reject(new Error('something went wrong')))
+    }));
+
+    const wrapper = shallowMount(App, {
+      stubs: {
+        RouterLink: RouterLinkStub
+      }
+    });
+
+    const result = await wrapper.vm.fetchPhotos();
+
+    expect(result).rejects.toEqual(
+      'There was an error fetching data: something went wrong'
+    );
+  });
 });
