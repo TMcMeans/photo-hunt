@@ -6,10 +6,11 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit --watch"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "flush-promises": "^1.0.2",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2"
   },
@@ -52,6 +53,11 @@
     "not ie <= 8"
   ],
   "jest": {
+    "collectCoverage": false,
+    "collectCoverageFrom": [
+      "**/*.{js,vue}",
+      "!**/node_modules/**"
+    ],
     "moduleFileExtensions": [
       "js",
       "jsx",

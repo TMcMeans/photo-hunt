@@ -17,9 +17,6 @@ export default {
   components: {
     Photo
   },
-  data: () => ({
-    page_number: 1
-  }),
   props: {
     photos: Array,
     query: String

@@ -9,7 +9,6 @@
 <script>
 export default {
   name: "SearchForm",
-  props: {},
   data: () => ({
     query: "",
     error: ""

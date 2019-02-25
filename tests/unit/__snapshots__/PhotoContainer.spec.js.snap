@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhotoContainer should render a snapshot with correct data passed in 1`] = `
+<div
+  class="photo-container"
+>
+  <h1
+    class="search-string"
+  >
+    viewing search results for: trees
+  </h1>
+   
+  <p
+    style="display: none;"
+  >
+    No photos found...
+  </p>
+   
+  <div
+    class="photo-wrapper"
+  >
+    <a
+      class="photo"
+    >
+      <img
+        alt="roadway surrounded by trees"
+        class="photo"
+        src="https://images.unsplash.com/photo-1529806414965-afc2044ad821?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjU4MDQzfQ"
+      />
+    </a>
+  </div>
+</div>
+`;
+
+exports[`PhotoContainer should render a snapshot with no data passed in 1`] = `
+<div
+  class="photo-container"
+>
+  <h1
+    class="search-string"
+    style="display: none;"
+  >
+    viewing search results for: 
+  </h1>
+   
+  <p>
+    No photos found...
+  </p>
+   
+  <div
+    class="photo-wrapper"
+  />
+</div>
+`;
