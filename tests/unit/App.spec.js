@@ -1,6 +1,5 @@
 import { mount, shallowMount } from '@vue/test-utils';
 import { RouterLinkStub } from '@vue/test-utils';
-import flushPromises from 'flush-promises';
 import App from '@/App.vue';
 import axios from 'axios';
 
@@ -147,4 +146,6 @@ describe('App', () => {
     await wrapper.vm.fetchPhotos('kittens');
     expect(wrapper.vm.photos).toEqual(expected);
   });
+
+  it('should throw an error');
 });

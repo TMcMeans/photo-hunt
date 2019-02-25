@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm should render a snapshot with correct error data passed in 1`] = `
+<div
+  class="search-form"
+>
+  <p
+    style=""
+  >
+    Type a query in the search bar to view related images.
+  </p>
+   
+  <input
+    placeholder="Search for photos"
+    type="text"
+  />
+   
+  <button>
+    Search
+  </button>
+</div>
+`;
+
+exports[`SearchForm should render a snapshot with correct query data passed in 1`] = `
+<div
+  class="search-form"
+>
+  <p
+    style="display: none;"
+  >
+    
+  </p>
+   
+  <input
+    placeholder="Search for photos"
+    type="text"
+  />
+   
+  <button>
+    Search
+  </button>
+</div>
+`;
+
+exports[`SearchForm should render a snapshot with no data passed in 1`] = `
+<div
+  class="search-form"
+>
+  <p
+    style="display: none;"
+  >
+    
+  </p>
+   
+  <input
+    placeholder="Search for photos"
+    type="text"
+  />
+   
+  <button>
+    Search
+  </button>
+</div>
+`;
