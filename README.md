@@ -1,34 +1,51 @@
-# photo-hunt
+# Photo Hunt
+
+Photo Hunt is a single page application built in Vue.js that uses the [Unplash API](https://unsplash.com/developers) to allow users to search for and view photos that relate to the search terms.
 
 ## Project setup
+
 ```
-npm install
+Go to https://unsplash.com/developers to sign up for a API access key
 ```
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
+In your terminal:
+
+$ git clone https://github.com/TMcMeans/photo-hunt
+
+$ cd into the 'photo-hunt' directory
 ```
 
-### Compiles and minifies for production
 ```
-npm run build
+Install dependencies:
+
+$ npm install
 ```
 
-### Run your tests
 ```
-npm run test
+Start the server or run tests:
+
+$ npm run serve
+
+$npm run test:unit
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Project goals
 
-### Run your unit tests
-```
-npm run test:unit
-```
+My goals for this project were to test and create a front-end application with a seamless UI in a Javascript framework that I am unfamiliar with.
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Technologies and Resources
+
+- Vue.js
+- Vue Router
+- HTML/CSS
+- Jest (testing)
+- Axios (HTTP client)
+
+## Developers
+
+[Tanjie McMeans](https://github.com/TMcMeans)
+
+## Implementation
+
+![screenshot](screenshot.png)
